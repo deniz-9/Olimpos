@@ -1,0 +1,169 @@
+.h2-styles {
+  @apply text-5xl text-darkblue1;
+}
+.h3-styles {
+  @apply text-3xl text-darkblue1;
+}
+.h4-styles {
+  @apply text-base text-darkblue1;
+}
+.h5-styles {
+  @apply text-sm text-gray;
+}
+.p-styles {
+  @apply text-gray font-semibold text-sm w-2/5;
+}
+.p-styles2 {
+  @apply text-gray font-semibold text-sm;
+}
+.span-styles {
+  @apply flex flex-col gap-3;
+}
+.box-outside {
+  @apply relative;
+}
+
+.box-img {
+  @apply w-full h-auto;
+}
+.section-class {
+  @apply flex items-center text-center justify-between w-full font-bold px-40 py-20  sm:px-10 sm:py-20 sm:gap-12 sm:w-full;
+}
+.team-span {
+  @apply flex flex-col items-center gap-4;
+}
+.social-media {
+  @apply flex flex-row gap-2 text-blue1;
+}
+.main-class {
+  @apply flex flex-col items-center text-center;
+}
+.box-style {
+  @apply border border-blue1 text-center font-bold items-center rounded-lg flex flex-col w-full gap-8 py-10;
+}
+.col-style {
+  @apply flex flex-col items-center w-[35%] gap-5;
+}
+.round-button {
+  @apply border border-gray rounded-full text-gray text-sm w-8 h-8;
+}
+.hide {
+  @apply sm:hidden;
+}
+.shop {
+  @apply border rounded-md shadow-lg shadow-gray pb-16 gap-8 sm:w-full items-center  flex flex-col;
+}
+.order-form {
+  @apply flex flex-col md:items-center font-bold text-darkblue1 py-4 px-8;
+}
+/* App.css */
+
+/* App.css */
+
+.popup {
+  @apply fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white p-6 rounded-lg shadow-lg z-50 max-w-sm w-full;
+}
+
+.overlay {
+  @apply fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 flex items-center justify-center z-50;
+}
+.address-box {
+  @apply flex flex-row justify-between gap-4 text-right;
+}
+.address-box-light {
+  @apply font-semibold;
+}
+.address-button {
+  @apply border border-darkblue1 w-32 h-16 justify-center px-2 rounded-xl flex flex-row md:flex-col gap-2 items-center font-bold bg-darkblue1 hover:bg-blue1 text-white shadow-md shadow-darkblue1;
+}
+
+/* Ana stil dosyası */
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  /* md ekranlarda gizle */
+  #mobile-bar {
+    display: none !important;
+  }
+}
+
+@media (min-width: 1200px) {
+  /* lg ve daha büyük ekranlarda gizle */
+  #mobile-bar {
+    display: none !important;
+  }
+}
+/* Diğer CSS kuralları burada olacak */
+
+/* PAYMENT STYLES */
+.form-radio {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  print-color-adjust: exact;
+  color-adjust: exact;
+  display: inline-block;
+  vertical-align: middle;
+  background-origin: border-box;
+  user-select: none;
+  flex-shrink: 0;
+  border-radius: 100%;
+  border-width: 2px;
+}
+
+.form-radio:checked {
+  background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 16 16' fill='white' xmlns='http://www.w3.org/2000/svg'%3e%3ccircle cx='8' cy='8' r='3'/%3e%3c/svg%3e");
+  border-color: transparent;
+  background-color: currentColor;
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+@media not print {
+  .form-radio::-ms-check {
+    border-width: 1px;
+    color: transparent;
+    background: inherit;
+    border-color: inherit;
+    border-radius: inherit;
+  }
+}
+
+.form-radio:focus {
+  outline: none;
+}
+
+.form-select {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23a0aec0'%3e%3cpath d='M15.3 9.3a1 1 0 0 1 1.4 1.4l-4 4a1 1 0 0 1-1.4 0l-4-4a 1 1 0 0 1 1.4-1.4l3.3 3.29 3.3-3.3z'/%3e%3c/svg%3e");
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  print-color-adjust: exact;
+  color-adjust: exact;
+  background-repeat: no-repeat;
+  padding-top: 0.5rem;
+  padding-right: 2.5rem;
+  padding-bottom: 0.5rem;
+  padding-left: 0.75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  background-position: right 0.5rem center;
+  background-size: 1.5em 1.5em;
+}
+
+.form-select::-ms-expand {
+  color: #a0aec0;
+  border: none;
+}
+
+@media not print {
+  .form-select::-ms-expand {
+    display: none;
+  }
+}
+
+@media print and (-ms-high-contrast: active), print and (-ms-high-contrast: none) {
+  .form-select {
+    padding-right: 0.75rem;
+  }
+}
