@@ -195,6 +195,7 @@ export const ShopCards = () => {
                   </Link>
 
                   <span id="button-span" className="flex flex-row gap-4">
+                    {/* TODO: Button'ları ayrı componente dönüştürmeliyiz */}
                     <button
                       className="p-4 flex border-2 text-lightgray bg-darkblue1 rounded-lg justify-center text-base sm:text-xl font-bold hover:bg-green"
                       onClick={() => addToCart(id)}
