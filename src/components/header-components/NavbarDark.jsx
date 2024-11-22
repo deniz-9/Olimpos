@@ -30,7 +30,7 @@ const NavbarDark = () => {
         <span className="flex" id="contact-span">
           <a
             className="flex text-center gap-2 items-center "
-            href=""
+            href="#"
             id="contact-logo"
           >
             <FontAwesomeIcon icon={faEnvelope} />
@@ -39,31 +39,31 @@ const NavbarDark = () => {
         </span>
       </label>
       <span className="flex flex-row">
-        <p>Follow Us and get a chance to win 80% off</p>
-      </span>
-      <label
-        id="social-media"
-        htmlFor=""
-        className="flex pb-2 sm:pb-0 items-center justify-between gap-4 md:gap-8"
-      >
-        <span className="flex flex-row gap-4">
-          <p className="">Follow Us :</p>
-          <span id="social-media-logos" className="flex gap-4 items-center  ">
-            <a href="https://www.instagram.com/">
-              <FontAwesomeIcon icon={faInstagram} />
-            </a>
-            <a href="https://www.youtube.com/">
-              <FontAwesomeIcon icon={faYoutube} />
-            </a>
-            <a href="https://www.facebook.com/">
-              <FontAwesomeIcon icon={faFacebook} />
-            </a>
-            <a href="https://www.twitter.com/">
-              <FontAwesomeIcon icon={faTwitter} />
-            </a>
-          </span>
-        </span>
-      </label>
+  <p>Follow Us for a Chance to Unlock 80% Discounts!</p>
+</span>
+<label
+  id="social-media"
+  className="flex pb-2 sm:pb-0 items-center justify-between gap-4 md:gap-8"
+>
+<span className="flex flex-row items-center gap-4">
+  <p>Follow Us :</p>
+  <div className="flex gap-4 items-center">
+    <a href="https://www.instagram.com/">
+      <FontAwesomeIcon icon={faInstagram} />
+    </a>
+    <a href="https://www.youtube.com/">
+      <FontAwesomeIcon icon={faYoutube} />
+    </a>
+    <a href="https://www.facebook.com/">
+      <FontAwesomeIcon icon={faFacebook} />
+    </a>
+    <a href="https://www.twitter.com/">
+      <FontAwesomeIcon icon={faTwitter} />
+    </a>
+  </div>
+</span>
+
+</label>
     </div>
   );
 };
