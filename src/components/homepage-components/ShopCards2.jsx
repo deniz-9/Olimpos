@@ -1,4 +1,3 @@
-import Slider3 from "./Slider3";
 import fluidImg from "../../assets/shopcards/container-img.png";
 import { Link } from "react-router-dom";
 
