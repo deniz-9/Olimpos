@@ -261,57 +261,58 @@ const Product = () => {
           id="product-container"
         >
           {productData &&
-            productData
-              .slice(indexOfFirstProduct, indexOfLastProduct)
-              .map((id, index) => (
-                <div
-                  className="flex flex-col items-center justify-between gap-4 shadow-md shadow-gray py-4"
-                  key={index}
-                >
-                  <Link
-                    to={`/${id.category_id}/${id.id}/${id.name}`}
-                    onClick={() => handleProductClick(id)}
-                    className="flex flex-col items-center gap-4"
-                  >
-                    <span className="flex items-center justify-center">
-                      <img
-                        src={id.images[0].url}
-                        className="h-64 w-fit  object-cover"
-                      />
-                    </span>
-                    <span className="flex flex-col items-center gap-4 px-4 md:text-center">
-                      <h4 className="text-base md:text-2xl font-bold">
-                        {id.name}
-                      </h4>
-                      <h5 className="text-sm md:text-lg font-bold text-[#737373]  w-64">
-                        {id.description}
-                      </h5>
-                    </span>
+  productData
+    .slice(indexOfFirstProduct, indexOfLastProduct)
+    .map((product) => (
+      <div
+        className="flex flex-col items-center justify-between gap-4 shadow-md shadow-gray py-4"
+        key={product.id} // Her ürünün benzersiz id'sini kullanıyoruz
+      >
+        <Link
+          to={`/${product.category_id}/${product.id}/${product.name}`}
+          onClick={() => handleProductClick(product)}
+          className="flex flex-col items-center gap-4"
+        >
+          <span className="flex items-center justify-center">
+            <img
+              src={product.images[0].url}
+              className="h-64 w-fit object-cover"
+              alt={product.name}
+            />
+          </span>
+          <span className="flex flex-col items-center gap-4 px-4 md:text-center">
+            <h4 className="text-base md:text-2xl font-bold">
+              {product.name}
+            </h4>
+            <h5 className="text-sm md:text-lg font-bold text-[#737373]  w-64">
+              {product.description}
+            </h5>
+          </span>
 
-                    <span className="flex flex-col md:text-lg items-center text-center justify-center gap-4 py-4 text-base font-bold">
-                      <h5 className="text-[#23856D]">{id.price} $</h5>
-                      <RatingStars rating={id.rating} />
-                    </span>
-                    <span id="colors">
-                      <div className="flex items-center justify-center space-x-2">
-                        <div className="w-4 h-4 rounded-full bg-red"></div>
-                        <div className="w-4 h-4 rounded-full bg-blue-500"></div>
-                        <div className="w-4 h-4 rounded-full bg-green"></div>
-                        <div className="w-4 h-4 rounded-full bg-yellow-500"></div>
-                      </div>
-                    </span>
-                  </Link>
+          <span className="flex flex-col md:text-lg items-center text-center justify-center gap-4 py-4 text-base font-bold">
+            <h5 className="text-[#23856D]">{product.price} $</h5>
+            <RatingStars rating={product.rating} />
+          </span>
+          <span id="colors">
+            <div className="flex items-center justify-center space-x-2">
+              <div className="w-4 h-4 rounded-full bg-red"></div>
+              <div className="w-4 h-4 rounded-full bg-blue-500"></div>
+              <div className="w-4 h-4 rounded-full bg-green"></div>
+              <div className="w-4 h-4 rounded-full bg-yellow-500"></div>
+            </div>
+          </span>
+        </Link>
 
-                  <span id="button-span" className="flex flex-row gap-4">
-                    <button
-                      className="p-4 flex border-2 text-lightgray bg-darkblue1 rounded-lg justify-center text-base sm:text-xl font-bold hover:bg-green"
-                      onClick={() => addToCart(id)}
-                    >
-                      Add to Cart
-                    </button>
-                  </span>
-                </div>
-              ))}
+        <span id="button-span" className="flex flex-row gap-4">
+          <button
+            className="p-4 flex border-2 text-lightgray bg-darkblue1 rounded-lg justify-center text-base sm:text-xl font-bold hover:bg-green"
+            onClick={() => addToCart(product)}
+          >
+            Add to Cart
+          </button>
+        </span>
+      </div>
+    ))}
         </span>
        <span>
        <Pagination
