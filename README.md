@@ -34,12 +34,12 @@ This project is a modern and scalable web application designed to provide a user
 ## Installation and Usage  
 
 1. **Clone the Repository:**  
-   ```bash
-   git clone https://github.com/deniz-9/Olimpos.git
+   
+   git clone: `https://github.com/deniz-9/Olimpos.git`
 2. ** Install Dependencies:**
-   ```npm install
+   `npm install`
 3. ** Run the Application:**
-   ```npm run dev
+  `npm run dev`
 4. **Backend API Integration:**
 Ensure the RESTful API connections are properly configured before running the project.
 
