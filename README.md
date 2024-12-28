@@ -53,4 +53,5 @@ If you would like to contribute, feel free to create a pull request or open an i
  ## License
 This project is licensed under the MIT License.
 
+ ## Contact
 If you would like to contact me, you can use the LinkedIn link in my profile.
